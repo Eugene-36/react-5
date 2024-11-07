@@ -23,14 +23,18 @@ const MovieReviews = () => {
   }, [movieId]);
   return (
     <div className={css.containerReviews}>
-      {reviews.map(({ author, content, id }) => (
-        <ul key={id}>
-          <li>{author}</li>
-          <li>
-            <p>{parse(content)}</p>
-          </li>
-        </ul>
-      ))}
+      {reviews.length > 0 ? (
+        reviews.map(({ author, content, id }) => (
+          <ul key={id}>
+            <li>{author}</li>
+            <li>
+              <p>{parse(content)}</p>
+            </li>
+          </ul>
+        ))
+      ) : (
+        <div>There is now review</div>
+      )}
     </div>
   );
 };
