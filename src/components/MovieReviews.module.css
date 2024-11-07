@@ -1,0 +1,9 @@
+.containerReviews ul {
+  margin: 0 0 20px 0;
+}
+.containerReviews ul li:first-child {
+  margin: 0 0 10px 0;
+}
+.containerReviews ul li:first-child {
+  font-weight: bolder;
+}

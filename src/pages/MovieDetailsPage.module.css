@@ -1,0 +1,34 @@
+.wrapperCard {
+  display: flex;
+  align-items: center;
+}
+.wrapperCard ul li {
+  margin: 0 0 15px 0;
+}
+.wrapperCard p,
+.wrapperCard h3 {
+  margin: 0;
+}
+.wrapperCard h3 {
+  margin: 0 0 15px 0;
+  color: black;
+}
+.wrapperCard img {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+}
+.wrapperCard .imgContainer {
+  margin: 0 25px 0 0;
+}
+.wrapperCard h2 {
+  margin: 0 0 20px 0;
+  color: black;
+  font-size: 32px;
+}
+.links {
+  margin: 20px 0 0 0;
+}
+.links li {
+  margin: 0 0 10px 0;
+}

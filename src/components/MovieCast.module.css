@@ -1,0 +1,22 @@
+.castContainer {
+  display: flex;
+  flex-flow: wrap;
+  gap: 20px;
+}
+
+.castContainer img {
+  width: 120px;
+}
+.castContainer ul li {
+  margin: 0 0 10px 0;
+}
+.castContainer ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  border: 1px solid black;
+}
+.castContainer ul:not(:last-child) {
+  margin: 0 0 25px 0;
+}

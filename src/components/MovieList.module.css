@@ -1,0 +1,7 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+}
+.listContainer a:not(:last-child) {
+  margin: 0 0 15px 0;
+}
