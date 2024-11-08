@@ -18,8 +18,22 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/movies' element={<MoviesPage />} />
           <Route path='/movies/:movieId' element={<MovieDetailsPage />}>
-            <Route path='cast' element={<MovieCast />} />
-            <Route path='reviews' element={<MovieReviews />} />
+            <Route
+              path='cast'
+              element={
+                <Suspense fallback={<div>Loading cast...</div>}>
+                  <MovieCast />
+                </Suspense>
+              }
+            />
+            <Route
+              path='reviews'
+              element={
+                <Suspense fallback={<div>Loading reviews...</div>}>
+                  <MovieReviews />
+                </Suspense>
+              }
+            />
           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>

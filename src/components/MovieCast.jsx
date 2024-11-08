@@ -8,8 +8,12 @@ const MovieCast = () => {
   const [cast, setCast] = useState([]);
   const { movieId } = useParams();
 
-  console.log('movieId', movieId);
+  const filteredData = cast.filter(
+    (value, index, self) => self.findIndex((v) => v.id === value.id) === index
+  );
+
   useEffect(() => {
+    if (!movieId || cast.length > 0) return;
     async function handleMovieCastRequest() {
       try {
         const data = await fetchMoviesByCredits(movieId);
@@ -21,10 +25,15 @@ const MovieCast = () => {
       }
     }
     handleMovieCastRequest();
-  }, [movieId]);
+  }, [movieId, cast]);
+  console.log(
+    cast.map((el) => {
+      console.log(el.id);
+    })
+  );
   return (
     <div className={css.castContainer}>
-      {cast.map(({ id, profile_path, name, character }) => (
+      {filteredData.map(({ id, profile_path, name, character }) => (
         <ul key={id}>
           <li>
             <img

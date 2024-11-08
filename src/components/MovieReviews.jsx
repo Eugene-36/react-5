@@ -9,6 +9,7 @@ const MovieReviews = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
+    if (!movieId || reviews.length > 0) return;
     async function handleMovieReviewRequest() {
       try {
         const data = await fetchMoviesByReview(movieId);
@@ -20,7 +21,7 @@ const MovieReviews = () => {
       }
     }
     handleMovieReviewRequest();
-  }, [movieId]);
+  }, [movieId, reviews]);
   return (
     <div className={css.containerReviews}>
       {reviews.length > 0 ? (

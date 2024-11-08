@@ -7,8 +7,7 @@ const SearchBox = ({ value, onChange }) => {
   };
   return (
     <div className={css.wrapper}>
-      {/* <HiSearch className={css.icon} /> */}
-      <form action='' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input name='search' className={css.input} type='text' value={value} />
         <button type='submit'>submit</button>
       </form>

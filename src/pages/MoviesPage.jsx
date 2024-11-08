@@ -18,7 +18,6 @@ const MoviesPage = () => {
       try {
         const data = await fetchMoviesByName(movieName);
         setSearched(data);
-        console.log('data', data);
       } catch (error) {
         console.log(error);
       }
